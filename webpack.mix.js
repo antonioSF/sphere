@@ -12,10 +12,10 @@ let mix = require('laravel-mix');
  */
 mix.combine([
     'resources/styles/views/above_the_fold.css',
-    'resources/styles/views/below_the_fold.css',
 ], 'public/styles/main.css');
 
-mix.js('resources/scripts/app.js', 'public/scripts/app.js'); 
+mix.js('resources/scripts/app.js', 'public/scripts/app.js');
+mix.sass('resources/styles/views/app.scss', 'public/styles/') 
 
 // Full API
 // mix.js(src, output);
