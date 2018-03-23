@@ -163,7 +163,7 @@ var Sphere = function (window, document, undefined) {
 	var _texture = new THREE.CanvasTexture(_generateTexture());
 
 	var _particlesMaterial = new THREE.PointsMaterial({
-		color: 0xe0e0e0,
+		color: 0xefefef,
 		size: 0.25,
 		map: _texture,
 		transparent: true,
@@ -172,11 +172,12 @@ var Sphere = function (window, document, undefined) {
 	});
 
 	var _linesMaterial = new THREE.LineBasicMaterial({
-		color: 0xe0e0e0,
+		color: 0xefefef,
 		transparent: true,
 		blending: THREE.AdditiveBlending,
 		depthWrite: false,
-		opacity: !isMobile() ? 0.5 : 0.2
+		//opacity: (Math.random() / ((!isMobile()) ? 0.5 : 0.2))
+		opacity: Math.random() / 1.2
 	});
 
 	var _render = function _render() {
