@@ -172,7 +172,7 @@ const Sphere = ((window, document, undefined) => {
       lines.rotation.y = Math.random() * Math.PI
       lines.updateMatrix()
       scene.add(lines)
-    };
+    }
 
     const animate = () => {
       requestAnimationFrame(animate)
